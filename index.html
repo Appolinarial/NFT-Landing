@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <header id="home" class="header">
+        <div class="container col-md-8 col-10">
+            <div class="header__nav d-flex my-30 justify-content-between mobile-hidden">
+                <a class="header__logo" href="/">
+                    <img src="images/logo.png" alt="NFT">
+                </a>
+                <a href="#home" class="mobile-hidden">Главная</a>
+                <a href="#advantages" class="mobile-hidden">Что даст обучение</a>
+                <a><button class="button btn-cabinet">Личный кабинет</button></a>
+            </div>
+
+            <svg class="menu__open-button desktop-hidden" onclick="openMenu()"width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0.199951" width="40" height="3" rx="1.5" fill="#FBF7FE"/>
+                <rect y="13.2" width="40" height="3" rx="1.5" fill="#FBF7FE"/>
+            </svg>
+
+            <div class="header__content d-flex flex-column">
+                <h1 class="header__title">Не упусти возможность войти в <span class="bold">прибыльную нишу</span></h1>
+                <p class="header__description">Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+                <div class="header__button">
+                    <button class="btn m-3 " onclick="openMenu()">Начать зарабатывать на NFT</button>
+                </div>
+                <img src="images/man.png"></img>
+            </div>
+
+            <div id="main-menu" class="header__menu-popup hidden d-flex justify-content-center w-100 h-100">
+                <div class="header__menu-popup-container container d-flex justify-content-center">
+                    <svg onclick="сloseMenu()" class="menu__closed-button desktop-hidden" width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.68701" width="27.3715" height="3.8" transform="rotate(45 2.68701 0)"></rect>
+                        <rect x="0.831299" y="19.5566" width="27.3715" height="3.8" transform="rotate(-45 0.831299 19.5566)"></rect>
+                    </svg>
+                    <div class="header__menu-popup-content menu-closed d-flex flex-column align-items-center">
+                        <ul class="header__menu-popup-items p-0 m-0 d-flex flex-column align-items-center">
+                            <li><a href="#home" onclick="сloseMenu()">Главная</a></li>
+                            <li><a href="#advantages" onclick="сloseMenu()">Что даст обучение</a></li>
+                        </ul>
+                        <button class="button">Личный кабинет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="advantages" class="advantages">
+        <div class="container d-flex flex-column py-6 col-md-8" style="background-color: #1D2532; margin-top:65px; border-radius: 20px;">
+            <h2 class="text-align-center">Что даст тебе обучение?</h2>
+            <div class="container">
+                <div class="col-12 col-sm-6 col-md-3 p-3 advantages__card">
+                    <div class="advantages__image">
+                        <img src="images/smile1.png" alt="Картинка">
+                    </div>
+                    <p class="advantages__description">Откроешь свой первый криптокошелек и научишься с ним работать</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 p-3 advantages__card">
+                    <div class="advantages__image">
+                        <img src="images/smile2.png" alt="Картинка">
+                    </div>
+                    <p class="advantages__description">Поймешь, как выбирать правильные дропы</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 p-3 advantages__card">
+                    <div class="advantages__image">
+                        <img src="images/smile3.png" alt="Картинка">
+                    </div>
+                    <p class="advantages__description">Построишь план по быстрому приумножению заработанных средств</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 p-3 advantages__card">
+                    <div class="advantages__image">
+                        <img src="images/smile4.png" alt="Картинка">
+                    </div>
+                    <p class="advantages__description">Узнаешь, кто такие холдеры и флипперы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="feedback-form-modal" class="menu-closed col-md-4 col-12">
+        <h2>Начни прямо сейчас!</h2>
+        <p>Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+        <input type="email" placeholder="Ваш email" class="my-3">
+        <button class="button btn">Оплатить</button>
+    </div>
+    <script>
+        function openMenu() {
+            document.getElementById("main-menu").classList.remove("menu-closed");
+        }
+        function сloseMenu() {
+            document.getElementById("main-menu").classList.add("menu-closed");
+        }
+    </script>
+</body>
+
+</html>
